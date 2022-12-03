@@ -6,10 +6,10 @@
     padding: 0 14px;
 }
 
-.example-card {
+/* .example-card {
     max-width: 200px;
     margin: 10px;
-}
+} */
 
 .example-container {
     height: 100%;
@@ -29,4 +29,12 @@
 .receipt {
     width: 30vw;
     border-style: dashed;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
 }

@@ -11,6 +11,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatTabsModule,
     MatCardModule,
     MatChipsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FormsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
