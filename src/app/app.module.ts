@@ -13,10 +13,13 @@ import { MatChipsModule } from '@angular/material/chips';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { OrderComponent } from './order/order.component';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatChipsModule,
     MatSidenavModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
