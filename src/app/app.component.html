@@ -25,8 +25,10 @@
             <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%" *ngIf="m.category==c.id">
               <!-- CARDS -->
               <!-- Loop on each MenuEntry and add it if it's the right category -->
-              <mat-card class="mat-elevation-z4 entryCard" matRipple [matRippleAnimation]="{ enterDuration: 500, exitDuration: 1000 }" (click)="order.addEntry(m)">
-                <img mat-card-image class="cardImageStandardize" src="http://localhost:4999/web/img/menuEntry_{{m.id}}.jpg" alt="{{m.name}}">
+              <mat-card class="mat-elevation-z4 entryCard" matRipple
+                [matRippleAnimation]="{ enterDuration: 500, exitDuration: 1000 }" (click)="order.addEntry(m)">
+                <img mat-card-image class="cardImageStandardize"
+                  src="http://localhost:4999/web/img/menuEntry_{{m.id}}.jpg" alt="{{m.name}}">
                 <mat-card-header>
                   <mat-card-title>{{m.name}}</mat-card-title>
                   <span class="example-spacer"></span>

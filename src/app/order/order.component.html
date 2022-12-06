@@ -1,4 +1,9 @@
+<h1>Order:</h1>
 <div class="orderContainer">
-    <h1>Order:</h1>
     <p *ngFor="let o of order">{{o}}</p>
+
+    <button color="primary" *ngIf="order.length > 0" class="fabPosition" mat-fab extended>
+        <mat-icon>print</mat-icon>
+        Conferma ordine
+    </button>
 </div>
