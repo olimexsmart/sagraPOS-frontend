@@ -12,7 +12,7 @@
 <!-- FOOD CARDS -->
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav position="end" class="example-sidenav" mode="side">
-    <app-order #order></app-order>
+    <app-order #order [categories]="categories" [menu]="menu" ></app-order>
   </mat-sidenav>
   <!-- TABS -->
   <!-- Change for "below" to position tabs at the bottom -->
@@ -22,7 +22,7 @@
       <div class="content">
         <div fxLayout="row wrap" fxLayoutGap="16px grid">
           <ng-container *ngFor="let m of menu">
-            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%" *ngIf="m.category==c.id">
+            <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%" *ngIf="m.category==c.id">
               <!-- CARDS -->
               <!-- Loop on each MenuEntry and add it if it's the right category -->
               <mat-card class="mat-elevation-z4 entryCard" matRipple

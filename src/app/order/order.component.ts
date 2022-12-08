@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuEntry } from '../menu-entry';
+import { MenuCategories } from '../menu-categories';
 
 @Component({
   selector: 'app-order',
@@ -7,8 +8,20 @@ import { MenuEntry } from '../menu-entry';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent {
-  order : string[] = []
-  addEntry(entry: MenuEntry) : void {
-    this.order.push(entry.name)
+
+  @Input() categories: MenuCategories[] = [];
+  @Input() menu: MenuEntry[] = [];
+
+  order: Map<MenuEntry, number> = new Map()
+  catPresent: Map<number, number> = new Map()
+
+  addEntry(entry: MenuEntry): void {
+    this.order.set(entry, (this.order.get(entry) ?? 0) + 1)
+    this.catPresent.set(entry.category, (this.catPresent.get(entry.category) ?? 0) + 1)
+  }
+
+  removeEntry(entry: MenuEntry): void {
+    this.order.set(entry, (this.order.get(entry) ?? 0) - 1)
+    this.catPresent.set(entry.category, (this.catPresent.get(entry.category) ?? 0) - 1)
   }
 }
