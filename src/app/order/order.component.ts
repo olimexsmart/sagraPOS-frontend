@@ -17,11 +17,11 @@ export class OrderComponent {
 
   addEntry(entry: MenuEntry): void {
     this.order.set(entry, (this.order.get(entry) ?? 0) + 1)
-    this.catPresent.set(entry.category, (this.catPresent.get(entry.category) ?? 0) + 1)
+    this.catPresent.set(entry.categoryID, (this.catPresent.get(entry.categoryID) ?? 0) + 1)
   }
 
   removeEntry(entry: MenuEntry): void {
     this.order.set(entry, (this.order.get(entry) ?? 0) - 1)
-    this.catPresent.set(entry.category, (this.catPresent.get(entry.category) ?? 0) - 1)
+    this.catPresent.set(entry.categoryID, (this.catPresent.get(entry.categoryID) ?? 0) - 1)
   }
 }

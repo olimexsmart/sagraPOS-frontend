@@ -64,7 +64,8 @@
               "browserTarget": "sagraPOS:build:production"
             },
             "development": {
-              "browserTarget": "sagraPOS:build:development"
+              "browserTarget": "sagraPOS:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
