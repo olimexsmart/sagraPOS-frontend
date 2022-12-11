@@ -12,7 +12,15 @@
     </div>
   </ng-container>
 
-  <button color="primary" *ngIf="order.size > 0" class="fabStyle" mat-fab extended>
+  <div *ngIf="total > 0" class="receiptCategory mat-elevation-z4">
+    <div class="receiptLine">
+      <span>TOTALE</span>
+      <span>{{total}}</span>
+    </div>
+  </div>
+
+  <button color="primary" *ngIf="order.size > 0" 
+    class="fabStyle" (click)="printAndClear()" mat-fab extended>
     <mat-icon>print</mat-icon>
     Conferma ordine
   </button>
